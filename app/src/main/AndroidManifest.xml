@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.waskj.hongloumeng">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.waskj.hongloumeng.main.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.waskj.hongloumeng.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.waskj.hongloumeng.main.TitleActivity"
+            android:theme="@style/Theme.Floating"
+            android:label="TitleActivity">
+        </activity>
+        <activity
+            android:name="com.waskj.hongloumeng.main.SplashActivity"
+            android:theme="@style/Theme.Floating.Fullscreen"
+            android:label="SplashActivity">
+        </activity>
+        <activity
+            android:name="com.waskj.hongloumeng.wxapi.WXEntryActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>
