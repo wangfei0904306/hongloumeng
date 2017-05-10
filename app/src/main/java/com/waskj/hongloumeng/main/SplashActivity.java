@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.ImageView;
 
 import java.util.Calendar;
 
@@ -27,7 +26,7 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash_old);
         RequestQueue mQueue = Volley.newRequestQueue(this);
         ImageLoader imageLoader = new ImageLoader(mQueue, new BitmapCache());
         NetworkImageView adImage = (NetworkImageView)findViewById(R.id.image_ad);
@@ -55,8 +54,6 @@ public class SplashActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     public void finish(){
-        spEditor.putInt(Constants.DAY,  Calendar.getInstance().get(Calendar.DAY_OF_MONTH) );
-        spEditor.commit();
         super.finish();
         overridePendingTransition(R.anim.nothing, R.anim.alpha_out); //不加这一句退出动画不行
     }

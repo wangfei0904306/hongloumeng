@@ -48,9 +48,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         int day = MyApplication.sharedPrefs.getInt(Constants.DAY, 0);
         Log.d(TAG, "上次打开于" + day + "号   今天是" + Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + "号");
-        if(day != Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
-            SplashActivity.actionStart(MainActivity.this);
+        if(day == (int)Calendar.getInstance().get(Calendar.DAY_OF_MONTH)){
+            com.waskj.hongloumeng.qqad.SplashActivity.actionStart(MainActivity.this);
+        }else{
+            spEditor.putInt(Constants.DAY,  Calendar.getInstance().get(Calendar.DAY_OF_MONTH) );
+            spEditor.commit();
         }
+
 
         CHAPTER_MAX = getResources().getInteger(R.integer.chapter_num);
 

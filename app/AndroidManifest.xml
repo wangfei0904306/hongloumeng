@@ -26,6 +26,11 @@
             android:theme="@style/Theme.Floating.Fullscreen"
             android:label="SplashActivity">
         </activity>
+        <activity
+            android:name="com.waskj.hongloumeng.qqad.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
     </application>
 
 </manifest>
